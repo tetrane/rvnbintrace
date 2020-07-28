@@ -53,6 +53,9 @@ public:
 			case MachineDescription::Archi::x64_1:
 				std::cout << "x64 (v1)";
 				break;
+			case MachineDescription::Archi::arm64_1:
+				std::cout << "aarch64 (v1)";
+				break;
 			default:
 				std::cout << "unknown";
 		}

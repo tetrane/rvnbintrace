@@ -22,7 +22,8 @@ class MachineDescription
 {
 public:
 	enum class Archi {
-		x64_1
+		x64_1,
+		arm64_1,
 	};
 
 	enum class RegisterOperator {

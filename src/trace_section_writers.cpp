@@ -29,6 +29,9 @@ void write_trace_machine_description(binresource::Writer& writer, const MachineD
 		case MachineDescription::Archi::x64_1:
 			magic_value = 0x31343678;
 			break;
+		case MachineDescription::Archi::arm64_1:
+			magic_value = 0x316d7261;
+			break;
 	}
 	section_writer.write<std::uint32_t>(magic_value);
 

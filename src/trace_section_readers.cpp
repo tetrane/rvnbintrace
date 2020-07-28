@@ -37,6 +37,9 @@ MachineDescription read_trace_machine_description(binresource::Reader& reader)
 		case 0x31343678:
 			result.architecture = MachineDescription::Archi::x64_1;
 			break;
+		case 0x316d7261:
+			result.architecture = MachineDescription::Archi::arm64_1;
+			break;
 		default:
 			std::string magic_string(reinterpret_cast<char*>(&magic_value), 4);
 			throw UnsupportedFeature(std::string("architecture magic ") + magic_string);
