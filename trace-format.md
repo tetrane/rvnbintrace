@@ -22,7 +22,7 @@ Events
 
 # Section description
 
-Sections are declares as a stream of bytes, with sizes. Each section starts with a `Section size` value, which store the size of the section _excluding this size parameter_.
+Sections are declared as a stream of bytes, with sizes. Each section starts with a `Section size` value, which stores the size of the section _excluding this size parameter_.
 
 Note that strings are ASCII, and are stored in the following way unless specified otherwise:
 1B: string character count (no trailing null character)

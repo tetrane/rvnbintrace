@@ -13,7 +13,7 @@ Index: Trace context ID -> cache point
 
 # Section description
 
-Sections are declares as a stream of bytes, with sizes. Each section starts with a `Section size` value, which store the size of the section _excluding this size parameter_.
+Sections are declared as a stream of bytes, with sizes. Each section starts with a `Section size` value, which stores the size of the section _excluding this size parameter_.
 
 ## Header
 
