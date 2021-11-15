@@ -4,7 +4,8 @@
 #include <utility>
 #include <set>
 
-#include <rvnmetadata/metadata.h>
+#include <rvnmetadata/metadata-common.h>
+#include <rvnmetadata/metadata-bin.h>
 
 #include <common.h>
 #include <trace_section_writers.h>
@@ -32,7 +33,7 @@ TraceWriter::TraceWriter(std::unique_ptr<std::ostream>&& output_stream, const Ma
     		tool_info + std::string(" - using rvnbintrace ") + writer_version
     	);
 
-    	return binresource::Writer::create(std::move(output_stream), md.to_bin_raw_metadata());
+    	return binresource::Writer::create(std::move(output_stream), metadata::to_bin_raw_metadata(md));
     }())
   , machine_(machine_description)
   , initial_section_written_(false)

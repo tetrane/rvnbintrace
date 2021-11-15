@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <vector>
 
-#include <rvnmetadata/metadata.h>
+#include <rvnmetadata/metadata-common.h>
 #include <rvnbinresource/writer.h>
 #include <rvnbinresource/reader.h>
 

@@ -6,7 +6,8 @@
 #include <iostream>
 #include <vector>
 
-#include <rvnmetadata/metadata.h>
+#include <rvnmetadata/metadata-common.h>
+#include <rvnmetadata/metadata-bin.h>
 #include <rvnbinresource/reader.h>
 
 #include "section_reader.h"
@@ -57,7 +58,7 @@ public:
 	std::uint64_t next_event_index() const { return current_event_id_; }
 
 	//! Returns the metadata of the resource
-	metadata::Metadata metadata() const { return metadata::Metadata::from_raw_metadata(reader_.metadata()); }
+	metadata::Metadata metadata() const { return metadata::from_raw_metadata(reader_.metadata()); }
 
 	static metadata::Version resource_version();
 

@@ -23,7 +23,8 @@ target_link_libraries(test_rvnbintrace_writer
 
   PRIVATE
     rvnbintrace
-    rvnmetadata
+    rvnmetadata::common
+    rvnmetadata::bin
     Boost::unit_test_framework
 )
 
@@ -44,7 +45,8 @@ target_link_libraries(test_rvnbintrace_reader
 
   PRIVATE
     rvnbintrace
-    rvnmetadata
+    rvnmetadata::common
+    rvnmetadata::bin
     Boost::unit_test_framework
 )
 

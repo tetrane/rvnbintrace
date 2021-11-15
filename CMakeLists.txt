@@ -53,7 +53,8 @@ target_include_directories(rvnbintrace
 target_link_libraries(rvnbintrace
   PUBLIC
     rvnbinresource
-    rvnmetadata
+    rvnmetadata::common
+    rvnmetadata::bin
 )
 
 set(PUBLIC_HEADERS

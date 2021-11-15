@@ -3,7 +3,8 @@
 #include <string>
 #include <istream>
 
-#include <rvnmetadata/metadata.h>
+#include <rvnmetadata/metadata-common.h>
+#include <rvnmetadata/metadata-bin.h>
 #include <rvnbinresource/reader.h>
 
 #include "section_reader.h"
@@ -52,7 +53,7 @@ public:
 	const CacheIndex& index() const { return index_; }
 
 	//! Returns the metadata of the resource
-	metadata::Metadata metadata() const { return metadata::Metadata::from_raw_metadata(reader_.metadata()); }
+	metadata::Metadata metadata() const { return metadata::from_raw_metadata(reader_.metadata()); }
 
 	static metadata::Version resource_version();
 

@@ -5,7 +5,8 @@
 #include <set>
 #include <cassert>
 
-#include <rvnmetadata/metadata.h>
+#include <rvnmetadata/metadata-common.h>
+#include <rvnmetadata/metadata-bin.h>
 
 #include <common.h>
 #include <cache_section_writers.h>
@@ -32,7 +33,7 @@ CacheWriter::CacheWriter(std::unique_ptr<std::ostream>&& output_stream, std::uin
     		tool_info + std::string(" - using rvnbintrace ") + writer_version
     	);
 
-    	return binresource::Writer::create(std::move(output_stream), md.to_bin_raw_metadata());
+    	return binresource::Writer::create(std::move(output_stream), metadata::to_bin_raw_metadata(md));
     }())
   , machine_(machine_description)
 {
